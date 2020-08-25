@@ -2,6 +2,7 @@ import pyautogui as pg
 import datetime
 import time
 
+# # 想定デバイスはMacbook Pro 13-inch
 # # Toolbarの右上にトークルームの右下を合わせた場合を想定
 # positionX, positionY = pg.position()
 # print(positionX, positionY)
