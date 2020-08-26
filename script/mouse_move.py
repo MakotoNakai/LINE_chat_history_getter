@@ -35,9 +35,10 @@ now = datetime.datetime.now()
 filename = now.strftime('%Y%m%d%H%M%S') + '.txt'
 pg.typewrite(filename)
 
-# 3本線をクリック
+# savesをクリック
 pg.moveTo(327, 298)
 pg.click()
+
 
 
 
