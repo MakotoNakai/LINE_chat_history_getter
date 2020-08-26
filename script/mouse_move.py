@@ -16,12 +16,12 @@ pg.click()
 
 # 緑のボタン(OK)をクリック
 pg.moveTo(1072, 561)
-time.sleep(0.5)
+time.sleep(0.2)
 pg.click()
 
 # ファイル名に移動
-pg.moveTo(630, 74)
-time.sleep(0.5)
+pg.moveTo(612, 85)
+time.sleep(0.2)
 pg.click()
 
 # ファイル名を記入
@@ -34,8 +34,16 @@ now = datetime.datetime.now()
 filename = now.strftime('%Y%m%d%H%M%S') + '.txt'
 pg.typewrite(filename)
 
-# 3本線をクリック
-pg.moveTo(327, 298)
+# LINE_chat_history_getterフォルダをクリック
+pg.moveTo(275, 331)
+pg.click()
+
+# downloadフォルダをクリック
+pg.moveTo(461, 180)
+pg.click()
+
+# Saveボタンをクリック
+pg.moveTo(1005, 744)
 pg.click()
 
 
