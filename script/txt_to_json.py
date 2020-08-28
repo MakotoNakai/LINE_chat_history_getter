@@ -140,13 +140,10 @@ def txt_to_json(file):
 
     # ファイルを命名
     filename = now.strftime('%Y%m%d%H%M%S')
+    # now += timedelta(second=1)
 
     #新規作成したファイルを開く
     f = open("../json_files/{}.json".format(filename), "w", encoding='utf-8_sig')
 
     # JSONファイルの中身を書き込む
     json.dump(JSON, f, ensure_ascii=False, indent=4, separators=(',', ': '))
-
-
-if __name__ == "__main__":
-    txt_to_json('../txt_files/20200827211151.txt')
