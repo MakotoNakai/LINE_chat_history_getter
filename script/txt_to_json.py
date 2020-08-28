@@ -95,13 +95,13 @@ def txt_to_json(file):
 
             # postUserを取得
             if len(word_array) == 2:
-                postUser = ''
+                pass
             else:
                 postUser = word_array[1]
 
             # messageを取得
-            if len(each_message[j].split()) == 2:
-                message = word_array[1]
+            if len(word_array) == 2:
+                pass
             else:
                 message = ''.join(word_array[2:])
 
