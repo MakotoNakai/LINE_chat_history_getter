@@ -2,46 +2,39 @@ import pyautogui as pg
 import datetime
 import time
 
-# 想定デバイスはMacbook Pro 13-inch
+# 想定デバイスはWindows10
 # Toolbarの右上にトークルームの右下を合わせた場合を想定
 
 
 def move_mouse():
 
+    # 1番下をクリック
+    pg.moveTo(1238, 616)
+    pg.click()
+
     # 3本線をクリック
-    pg.moveTo(1242, 305)
+    pg.moveTo(1263, 327)
     pg.click()
 
     # Save chatをクリック
-    pg.moveTo(1196, 403)
+    pg.moveTo(1200, 527)
     pg.click()
 
-    # 緑のボタン(OK)をクリック
-    pg.moveTo(1072, 561)
-    time.sleep(0.5)
-    pg.click()
-
-    # ファイル名に移動
-    pg.moveTo(630, 74)
-    time.sleep(0.5)
-    pg.click()
-
-    # ファイル名を記入
+    # 元のファイル名を消去
     pg.keyDown('backspace')
-    for i in range(10):
+    for i in range(14):
         pg.press('backspace')
     pg.keyUp('backspace')
 
+    # ファイル名を記入
     now = datetime.datetime.now()
     filename = now.strftime('%Y%m%d%H%M%S') + '.txt'
     pg.typewrite(filename)
 
     # savesをクリック
-    pg.moveTo(327, 298)
+    pg.moveTo(998, 689)
     pg.click()
 
+if __name__ == "__main__":
 
-
-
-
-
+    move_mouse()
