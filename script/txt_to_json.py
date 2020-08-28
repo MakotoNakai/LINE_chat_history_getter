@@ -132,7 +132,10 @@ def txt_to_json(file):
         dict_["createdAt"] = createdAt_list[l]
 
         # 辞書をbodyに格納
-        JSON["body"][str(l+1)] = dict_
+        if l == 68:
+            pass
+        else:
+            JSON["body"][str(l+1)] = dict_
 
 
     # 現在時刻を取得

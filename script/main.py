@@ -27,7 +27,7 @@ if __name__ == "__main__":
     #
     # time.sleep(5)
 
-    #.txtファイルを.jsonファイルに変換する
+    # #.txtファイルを.jsonファイルに変換する
     #txt_to_json('../txt_files/pentas.txt')
 
     # time.sleep(1)
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     url = "https://o9s422tqzg.execute-api.ap-northeast-1.amazonaws.com/prod/"
     #
     # json_open = open( "../json_files/20200828172902.json", "r", encoding="utf-8_sig") # ぺんたさんが入ってるもの
-    json_open = open( "../json_files/20200829005437.json", "r", encoding="utf-8_sig") # かぶっているもの
+    json_open = open( "../json_files/20200829012949.json", "r", encoding="utf-8_sig") # かぶっているもの
     json_load = json.load(json_open)
     response = requests.post(url, json = json_load)
 
