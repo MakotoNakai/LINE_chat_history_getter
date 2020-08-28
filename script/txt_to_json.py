@@ -124,17 +124,19 @@ def txt_to_json(file):
     # bodyを挿入
     for l in range(len(postTime_list)):
 
-        # bodyの各項目を辞書にまとめる
-        dict_ = dict()
-        dict_["postTime"] = postTime_list[l]
-        dict_["postUser"] = postUser_list[l]
-        dict_["message"] = message_list[l]
-        dict_["createdAt"] = createdAt_list[l]
 
-        # 辞書をbodyに格納
-        if l == 68:
+        # エスケープシーケンスがある場合
+        if '¥' in postUser_list[l] or '"' in postUser_list[l]:
             pass
+
+        # エスケープシーケンスがない場合
         else:
+            # bodyの各項目を辞書にまとめる
+            dict_ = dict()
+            dict_["postTime"] = postTime_list[l]
+            dict_["postUser"] = postUser_list[l]
+            dict_["message"] = message_list[l]
+            dict_["createdAt"] = createdAt_list[l]
             JSON["body"][str(l+1)] = dict_
 
 
