@@ -28,7 +28,7 @@ def txt_to_json(file):
     while i < len(all_messages):
 
         # 送信が取り消された場合
-        if "送信を取り消しました" in all_messages[i]:
+        if "送信を取り消しました" in all_messages[i] or "が参加しました" in all_messages[i]:
 
             #そのコメントはスルー
             pass
