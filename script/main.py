@@ -54,4 +54,5 @@ if __name__ == "__main__":
     response = requests.post(url, json = json_load)
 
     resDatas = response.json()
-    print(response)
+    print(response) # <Response [200]>
+    pritn(resDatas) # {'statusCode': 200, 'body': '"Hello from Lambda!"'}
