@@ -145,7 +145,6 @@ def txt_to_json(file):
 
     # ファイルを命名
     filename = now.strftime('%Y%m%d%H%M%S')
-    # now += timedelta(second=1)
 
     #新規作成したファイルを開く
     f = open("../json_files/{}.json".format(filename), "w", encoding='utf-8_sig')

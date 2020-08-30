@@ -8,9 +8,9 @@ import time
 
 def move_mouse():
 
-    # # 1番下をクリック
-    # pg.moveTo(1238, 616)
-    # pg.click()
+    # 1番下をクリック
+    pg.moveTo(1238, 547)
+    pg.click()
 
     # 3本線をクリック
     pg.moveTo(1263, 327)
